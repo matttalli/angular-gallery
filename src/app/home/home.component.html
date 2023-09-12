@@ -1,0 +1,5 @@
+<div class="form-group">
+  <label for="galleryCode"></label>
+  <input type="text" name="galleryCode" id="gallerCodeInput" placeholder="Enter Gallery Code" [(ngModel)]="galleryCodeId" (keyup.Enter)="goToGallery()" />
+  <button type="button" (click)="goToGallery()" [disabled]="!galleryCodeId">Go!</button>
+</div>

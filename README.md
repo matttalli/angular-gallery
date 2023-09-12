@@ -1,27 +1,24 @@
 # AngularGallery
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
-## Development server
+## Gallery
+This is a simple angular project to share pictures with friends by providing a code. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Generate Manifest File
+To be able to feed the gallery it needs a manifest file.
+Execute "create_manifest.ps1" in a powershell to generate a manifest text file.
 
-## Code scaffolding
+Command: create_manifest.ps1 %PathToFotos%
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+It will check for pictures in the target path and all subfolders.
 
-## Build
+### Put it on a web server
+Execute ng build and deploy the contents of dist folder to your desired webserver location.
+Also upload the pictures to a Photos folder next to the deployed project.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+..
+/angular-gallery
+/Photos
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Photos subfolders
+in the "Photos" folder place pictures you want to share in a subfolder. The subfolder name will be the code for your friends to access the pictures.
